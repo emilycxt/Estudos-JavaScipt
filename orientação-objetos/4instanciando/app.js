@@ -56,3 +56,89 @@ class Carro {
         console.log (`${this.marca} ${this.modelo}`);
     }
 }
+
+//Instanciação de Objetos - Forma 1
+
+// const curso = new Object();
+// curso.nome = 'Programação em JavaScript';
+// curso.preco = 27.99;
+
+// console.log (curso);
+
+// curso ['qtd_alunos'] = 999;
+
+// console.log (curso);
+
+// delete curso ['qtd_alunos'];
+// delete curso ['preco'];
+
+// console.log (curso);
+
+//Instanciação de Objetos - Forma 2 - Objeto Literal
+const programa = {
+    nome: 'Photoshop',
+    preco: 8999.99,
+    fabricante: {
+        nome: 'Adobe',
+        contato: 'concact@adobe.com',
+        endereço: {
+            rua: 'Da paz, 45',
+            bairro: 'Nova Lima',
+            cidade: 'São Paulo'
+        },
+    filiais: [
+        {cidade: 'Rio de Janeiro'},
+        {cidade: 'Recife'}
+    ]
+    }
+}
+
+// console.log (programa);
+
+// console.log (programa.nome); // Photoshop
+// console.log (programa.fabricante.nome); // Adobe
+// console.log (programa.fabricante.filiais.length); // 2
+// console.log (programa ['fabricante'] ['filiais']);
+
+// programa.nome = 'PlayStation OS';
+
+// console.log (programa.nome);
+
+// console.log (programa);
+
+// delete programa.fabricante.filiais 
+
+// console.log (programa.fabricante.filiais); //undefined
+
+// console.log (programa.fabricante.filiais.length); // ReferenceError
+
+
+
+//Instanciação de Objetos - Forma 4  - Função construtura
+
+function Lampada (cor){
+    this.cor = cor;
+}
+
+const li = new Lampada ('Branca');
+
+// console.log (li);
+
+// console.log (typeof(li));
+
+//Instanciação de Objetos - Forma 4  - Objeto a partir das nosssas classes
+
+const p1 = new Pessoa ('Felicity', 'Sobrenome');
+console.log (p1);
+console.log (typeof(p1));
+console.log (p1.nome); // função get
+console.log (p1.sobrenome); //função gets
+
+p1.nome = 'Xuxa';
+console.log (p1);
+
+p1.falar(msg);
+p1.comer();
+p1.beber();
+
+console.log (p1);
